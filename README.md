@@ -2,34 +2,31 @@
 
 [Русский](#русский) / [English](#english)
 
----
-
 ## Русский
 
-Репозиторий содержит файлы CDN для AI jailbreaks.
+Репозиторий содержит файлы и джеилбрейк (`default.md`).
 
 ### Содержимое
 
-- `.md` и `.txt` файлы - джеилбрейки для различных ИИ-моделей
-- Прочие вспомогательные файлы
+- `default.md` - джеилбрейк
+- Прочие файлы
 
 ### Контакты
 
-- Telegram: [t.me/jailbreaksai](https://t.me/jailbreaksai)
-- Telegram: [t.me/DanyaVoredom](https://t.me/DanyaVoredom)
+- [t.me/jailbreaksai](https://t.me/jailbreaksai)
 
----
+- [t.me/DanyaVoredom](https://t.me/DanyaVoredom)
 
 ## English
 
-This repository contains CDN files for AI jailbreaks.
+This repository contains files and jailbreak (`default.md`).
 
 ### Contents
 
-- `.md` and `.txt` files - jailbreaks for various AI models
-- Other auxiliary files
+- `default.md` - jailbreak
+- Other files
 
 ### Contacts
 
-- Telegram: [t.me/jailbreaksai](https://t.me/jailbreaksai)
-- Telegram: [t.me/DanyaVoredom](https://t.me/DanyaVoredom)
+- [t.me/jailbreaksai](https://t.me/jailbreaksai)
+- [t.me/DanyaVoredom](https://t.me/DanyaVoredom)
