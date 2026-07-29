@@ -1,3 +1,5 @@
+# CDN
+
 this repo contains files (cdn), includes ai jailbreaks (t.me/jailbreaksai) - .md and .txt files, also this contains other files - u wont need them.
 
 /
