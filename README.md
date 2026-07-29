@@ -1,7 +1,12 @@
-# CDN
+# Jailbreaks CDN
 
-this repo contains files (cdn), includes ai jailbreaks (t.me/jailbreaksai) - .md and .txt files, also this contains other files - u wont need them.
+Репозиторий содержит файлы CDN для AI jailbreaks.
 
-/
+## Содержимое
 
-этот репо содержит файлы (cdn), включая джеилбрейки для ИИ (t.me/jailbreaksai) - .md и .txt файлы, также оно содержит другие файлы - они вам нахуй не понадобятся.
+- `.md` и `.txt` файлы — джеилбрейки для различных ИИ-моделей
+- Прочие вспомогательные файлы
+
+## Контакты
+
+- Telegram: [t.me/jailbreaksai](https://t.me/jailbreaksai)
