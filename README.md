@@ -1,4 +1,4 @@
-# Jailbreaks CDN
+# CDN and Jailbreak
 
 [Русский](#русский) / [English](#english)
 
@@ -14,7 +14,6 @@
 ### Контакты
 
 - [t.me/jailbreaksai](https://t.me/jailbreaksai)
-
 - [t.me/DanyaVoredom](https://t.me/DanyaVoredom)
 
 ## English
