@@ -4,11 +4,11 @@
 
 ## Русский
 
-Репозиторий содержит файлы и джеилбрейк (`default.md`).
+Репозиторий содержит файлы и джеилбрейк (`contract.md`).
 
 ### Содержимое
 
-- `default.md` - джеилбрейк
+- `contract.md` - джеилбрейк
 - Прочие файлы
 
 ### Контакты
@@ -18,11 +18,11 @@
 
 ## English
 
-This repository contains files and jailbreak (`default.md`).
+This repository contains files and jailbreak (`contract.md`).
 
 ### Contents
 
-- `default.md` - jailbreak
+- `contract.md` - jailbreak
 - Other files
 
 ### Contacts
