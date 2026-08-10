@@ -29,3 +29,4 @@
 - VS Code CLI (code)
 - OpenSSH (ssh)
 - winget
+- ApkTool (apktool)
