@@ -9,6 +9,8 @@
 ### Содержимое
 
 - `contract.md` - джеилбрейк
+- `capabilities.md` - список тулов для десктопной машины
+- `capabilities.server.md` - список тулов для сервера (aarch64, Ubuntu в PRoot)
 - Прочие файлы
 
 ### Контакты
@@ -23,6 +25,8 @@ This repository contains files and jailbreak (`contract.md`).
 ### Contents
 
 - `contract.md` - jailbreak
+- `capabilities.md` - tool list for the desktop machine
+- `capabilities.server.md` - tool list for the server (aarch64, Ubuntu in PRoot)
 - Other files
 
 ### Contacts
