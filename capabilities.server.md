@@ -43,24 +43,33 @@ Ubuntu 26.04 в PRoot-контейнере внутри Termux, без Windows-�
 - uv (uv, uvx) - предпочтительный способ установки python-пакетов.
 - Node.js (node, npm, npx).
 - Rust (cargo, rustc).
+- Go (go) 1.26.
+- Java (java, javac) 25, OpenJDK headless. JAVA_HOME=/usr/lib/jvm/java-25-openjdk-arm64.
+- C/C++: gcc, g++, make (binutils 2.46), clang/lld/llvm 21 (Ubuntu, target
+  aarch64-unknown-linux-gnu), cmake 4.2, ninja 1.13, pkg-config, autoconf,
+  automake, libtool (бинарь называется libtoolize), bison, flex.
 - pwsh - Linux-сборка PowerShell, не Windows.
-- Git (git), GitHub CLI (gh).
-- ripgrep (rg).
+- Git (git), GitHub CLI (gh), git-lfs.
+- ripgrep (rg), fd, bat.
 - curl, wget.
-- jq (yq отсутствует).
+- jq, yq.
 - sqlite3.
 - tmux - для интерактивных сессий и фоновых процессов.
 - OpenSSH (ssh, scp, sftp, ssh-keygen, ssh-agent).
+- gdb, strace, lsof.
+- rsync, parallel, shellcheck, tree, ncdu, htop.
+- ffmpeg, imagemagick (convert, magick), pandoc, poppler-utils (pdftotext).
+- Архиваторы: tar, zip, unzip, 7z, gzip, bzip2, xz, zstd.
 
 ### Отсутствует на этом хосте
 
-- Go, Java, Gradle, .NET (dotnet), Flutter, Dart.
+- Gradle, .NET (dotnet), Flutter, Dart.
 - Ollama, huggingface-cli.
 - ruff, pytest, black, isort, mypy, pyright, flake8, bandit и прочие
   python-линтеры - ставятся через uv в конкретное venv.
 - IDA Pro, Ghidra, Cheat Engine, x64dbg, ReClass.NET - реверс-тулчейн
   отсутствует, задачи реверса здесь не выполнять.
-- LLVM/Clang, Android NDK, CMake, Ninja.
+- Android NDK.
 - VS Code CLI (code), WinRAR, winget, WSL, ApkTool.
 
 ### Специфика этого хоста
@@ -70,4 +79,8 @@ Ubuntu 26.04 в PRoot-контейнере внутри Termux, без Windows-�
 - DanyAPI и DanyBOT лежат в /root/DanyAPI и /root/DanyBOT, оба под git с
   origin на github.com/FANATFANATA.
 - Внешняя сеть до api.telegram.org идёт только через SOCKS5 127.0.0.1:1080.
-- Свободно около 422G на диске, 11G RAM.
+- Свободно около 418G на диске, 11G RAM.
+- В PATH после системных каталогов идёт /data/data/com.termux/files/usr/bin:
+  там свои clang, lld, pkg-config, lsof, unzip. Системные /usr/bin/clang и
+  /usr/bin/lsof имеют приоритет, но при явных вызовах с полным путём это надо
+  учитывать.
