@@ -20,20 +20,31 @@
 
 ## Git
 
-- Эти правила действуют только в проектах с кодом. В репозиториях с документацией и текстами ветки не создавай, тесты не запускай, работай в текущей ветке.
+Правила ниже действуют только в проектах с кодом. В репозиториях с документацией и текстами: ветки не создавай, тесты не запускай, коммиты не делай автоматически, работай в текущей ветке.
+
 - Ветки: dev и prod. Работай только в dev.
 - Если ветки dev нет - создай её.
-- Перед каждым коммитом запускай python tests.py.
-- Если tests.py упал - исправь и запусти заново. Коммить только при успешном прохождении.
+- Перед каждым коммитом запускай python tests.py, если файл есть в корне репозитория. Если файла нет, прогони тесты, которые есть. Если тестов нет - коммить без прогона.
+- Если тесты упали - исправь и запусти заново. Коммить только при успешном прохождении.
 - Коммит делай автоматически после каждой законченной подзадачи.
 - В коммит включай только свои файлы. Свои = созданные или изменённые в текущей сессии. Чужие незакоммиченные изменения не трогай.
 - Пуш в dev делай только по прямой команде.
 - В prod не пушь без прямой команды.
 - Сообщения коммитов: префикс fix:, feat:, doc: или chore:, кратко, на английском, только нижний регистр, без следов ИИ.
 
+## Файлы правил
+
+- capabilities.md - базовый файл: общие правила и тулчейн десктопного хоста.
+- capabilities.server.md - серверный хост. Общие правила держим в нём одинаковыми с базовым файлом, отличия только в списке инструментов и в особенностях хоста.
+- Правку общего правила вноси в оба файла в одной подзадаче. Расхождение общего правила в двух файлах - дефект.
+- В обоих файлах должен быть раздел с отсутствующими на хосте инструментами, иначе инструмент, которого нет, неотличим от недописанного.
+
 ## Installed tools in PATH
 
-- Python (3.14, 3.14t, 3.11, 3.10, py): pip, ruff, pytest, pytest-cov, pytest-asyncio, hypothesis, coverage, pyflakes, flake8, pycodestyle, pylint, pyreverse, symilar, mypy, mypyc, stubgen, stubtest, pyright, isort, black, blackd, bandit, vulture, radon, xenon, pip-audit, codespell, PyYAML
+Список отражает содержимое PATH этого хоста, проверено Get-Command и where.exe 2026-09-27. Инструмента нет в списке - его нет на машине, вызывать без установки нельзя.
+
+- Python (3.14, 3.14t, 3.11, 3.10, py): pip, ruff, pytest, hypothesis, coverage, pyflakes, flake8, pycodestyle, pylint, pyreverse, symilar, mypy, mypyc, stubgen, stubtest, pyright, isort, black, blackd, bandit, vulture, radon, xenon, pip-audit, codespell.
+- Python-пакеты без консольных команд, проверять импортом: pytest-cov, pytest-asyncio, PyYAML.
 - pip-tools (pip-compile, pip-sync, pip-review)
 - uv (uv, uvx)
 - IDA Pro (ida, idat, idapyswitch)
@@ -47,10 +58,10 @@
 - Windows PowerShell (powershell)
 - cmd
 - Ollama + Hugging Face CLI (huggingface-cli)
-- LLVM, Clang: clang, clang++, clang-cl, clang-cpp, clang-tidy, clangd, clang-format, git-clang-format, clang-doc, clang-query, clang-repl, clang-check, clang-apply-replacements, clang-include-cleaner, clang-scan-deps, scan-build, modularize, find-all-symbols, pp-trace, diagtool, flang, flang-new, lld, lld-link, ld.lld, ld64.lld, wasm-ld, lldb, lldb-dap, lldb-server, lldb-instr, lldb-argdumper, ar, nm, objcopy, objdump, readobj, strings, strip, size, ranlib, lib, dlltool, rc, mt, ml, ml64, mca, cov, profdata, profgen, dwp, cxxfilt, symbolizer, pdbutil, installapi, offload-bundler, nvlink-wrapper
+- LLVM, Clang: clang, clang++, clang-cl, clang-cpp, clang-tidy, clangd, clang-format, git-clang-format, clang-doc, clang-query, clang-repl, clang-check, clang-apply-replacements, clang-include-cleaner, clang-scan-deps, scan-build, modularize, find-all-symbols, pp-trace, diagtool, flang, flang-new, lld, lld-link, ld.lld, ld64.lld, wasm-ld, lldb, lldb-dap, lldb-server, lldb-instr, lldb-argdumper, llvm-ar, llvm-nm, llvm-objcopy, llvm-objdump, llvm-readobj, llvm-strings, llvm-strip, llvm-size, llvm-ranlib, llvm-lib, llvm-dlltool, llvm-rc, llvm-mt, llvm-ml, llvm-ml64, llvm-mca, llvm-cov, llvm-profdata, llvm-profgen, llvm-dwp, llvm-cxxfilt, llvm-symbolizer, llvm-pdbutil, clang-installapi, clang-offload-bundler, clang-nvlink-wrapper. Имена без префикса llvm- (ar, nm, objcopy, objdump, strings, strip, size и подобные) на этом хосте нет, это GNU binutils, здесь только llvm-варианты.
 - Git (git, git-lfs, tig, scalar, git-gui, gitk)
 - Android NDK r27d (ndk-build, ndk-gdb, ndk-lldb, ndk-stack, ndk-which)
-- Rust (cargo, rustc, rustup, rust-analyzer, rustfmt, cargo-fmt, clippy через cargo, cargo-miri, rustdoc)
+- Rust (cargo, rustc, rustup, rust-analyzer, rustfmt, cargo-fmt, clippy через cargo, cargo-miri, rustdoc). cargo-miri на этом хосте не работает: компонент miri не установлен для stable-x86_64-pc-windows-msvc.
 - Flutter
 - Dart (dart, dartaotruntime)
 - .NET (dotnet, nuget)
@@ -63,3 +74,17 @@
 - WSL (wsl)
 - sudo (Windows)
 - ApkTool (apktool)
+
+### Отсутствует на этом хосте
+
+Проверено Get-Command и where.exe 2026-09-27.
+
+- Gradle, JDK и Java (gradle, java, javac, jar), Maven (mvn), gradlew.
+- GNU binutils без префикса llvm- (ar, nm, objcopy, objdump, readobj,
+  strings, strip, size, ranlib, lib, dlltool, rc, mt, ml, ml64, mca, cov,
+  profdata, profgen, dwp, cxxfilt, symbolizer, pdbutil, installapi,
+  offload-bundler, nvlink-wrapper). Есть только llvm-варианты.
+- Компонент miri для cargo-miri: shim есть, сам компонент не установлен для
+  stable-x86_64-pc-windows-msvc.
+- Реверс-инструменты кроме IDA Pro и Ghidra: Cheat Engine, x64dbg, ReClass.NET
+  в PATH нет. Реверс вести через idat и analyzeHeadless, остальное запрашивать.

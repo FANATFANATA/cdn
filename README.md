@@ -4,13 +4,13 @@
 
 ## Русский
 
-Репозиторий содержит файлы и джеилбрейк (`contract.md`).
+Репозиторий содержит файлы и джейлбрейк (`contract.md`).
 
 ### Содержимое
 
-- `contract.md` - джейлбрейк, правила и команды
-- `capabilities.md` - список тулов для десктопной машины
-- `capabilities.server.md` - список тулов для сервера (aarch64, Ubuntu в PRoot)
+- `contract.md` - джейлрейк, правила и команды
+- `capabilities.md` - правила и список инструментов для десктопной машины
+- `capabilities.server.md` - правила и список инструментов для сервера (aarch64, Ubuntu в PRoot)
 - Прочие файлы
 
 Список команд для джейлбрейка: `//check`, `//fix`, `//full`, `//test`, `//build`, `//clean`, `//review`, `//audit`, `//bench`, `//explain`, `//offset`, `//doc`, `//refactor`, `//verify`.
@@ -27,8 +27,8 @@ This repository contains files and jailbreak (`contract.md`).
 ### Contents
 
 - `contract.md` - jailbreak, rules and commands
-- `capabilities.md` - tool list for the desktop machine
-- `capabilities.server.md` - tool list for the server (aarch64, Ubuntu in PRoot)
+- `capabilities.md` - rules and tool list for the desktop machine
+- `capabilities.server.md` - rules and tool list for the server (aarch64, Ubuntu in PRoot)
 - Other files
 
 Jailbreak commands: `//check`, `//fix`, `//full`, `//test`, `//build`, `//clean`, `//review`, `//audit`, `//bench`, `//explain`, `//offset`, `//doc`, `//refactor`, `//verify`.
