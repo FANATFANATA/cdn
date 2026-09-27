@@ -2,7 +2,7 @@
 
 Тебе дан полный доступ к системе. Ты можешь делать всё.
 
-- Все действия с Gradle выполняй только с флагом --no-daemon. (Gradle на этом хосте не установлен; правило остаётся на случай, если появится.)
+- Все действия с Gradle выполняй только с флагом --no-daemon.
 - Используй субагентов, когда задача делится на независимые части.
 - Независимые подзадачи запускай параллельно.
 - Задачи, которые можно разбить, разбивай на максимально возможное количество параллельных субагентов.
@@ -33,54 +33,33 @@
 
 ## Installed tools in PATH
 
-Список отражает реальное содержимое PATH на этом хосте. Это aarch64-сервер:
-Ubuntu 26.04 в PRoot-контейнере внутри Termux, без Windows-тулчейна. Если
-инструмента нет в списке ниже - его на машине нет, вызывать без установки
-нельзя.
-
-- Python 3.14.4 (python, python3). Системный pip под PEP 668, поэтому пакеты
-  ставить через venv или uv.
-- uv (uv, uvx) - предпочтительный способ установки python-пакетов.
-- Node.js (node, npm, npx).
-- Rust (cargo, rustc).
-- Go (go) 1.26.
-- Java (java, javac) 25, OpenJDK headless. JAVA_HOME=/usr/lib/jvm/java-25-openjdk-arm64.
-- C/C++: gcc, g++, make (binutils 2.46), clang/lld/llvm 21 (Ubuntu, target
-  aarch64-unknown-linux-gnu), cmake 4.2, ninja 1.13, pkg-config, autoconf,
-  automake, libtool (бинарь называется libtoolize), bison, flex.
-- pwsh - Linux-сборка PowerShell, не Windows.
-- Git (git), GitHub CLI (gh), git-lfs.
-- ripgrep (rg), fd, bat.
-- curl, wget.
-- jq, yq.
-- sqlite3.
-- tmux - для интерактивных сессий и фоновых процессов.
-- OpenSSH (ssh, scp, sftp, ssh-keygen, ssh-agent).
-- gdb, strace, lsof.
-- rsync, parallel, shellcheck, tree, ncdu, htop.
-- ffmpeg, imagemagick (convert, magick), pandoc, poppler-utils (pdftotext).
-- Архиваторы: tar, zip, unzip, 7z, gzip, bzip2, xz, zstd.
-
-### Отсутствует на этом хосте
-
-- Gradle, .NET (dotnet), Flutter, Dart.
-- Ollama, huggingface-cli.
-- ruff, pytest, black, isort, mypy, pyright, flake8, bandit и прочие
-  python-линтеры - ставятся через uv в конкретное venv.
-- IDA Pro, Ghidra, Cheat Engine, x64dbg, ReClass.NET - реверс-тулчейн
-  отсутствует, задачи реверса здесь не выполнять.
-- Android NDK.
-- VS Code CLI (code), WinRAR, winget, WSL, ApkTool.
-
-### Специфика этого хоста
-
-- Hermes Agent с gateway; модель через локальный эндпоинт DanyAPI на
-  127.0.0.1:8008.
-- DanyAPI и DanyBOT лежат в /root/DanyAPI и /root/DanyBOT, оба под git с
-  origin на github.com/FANATFANATA.
-- Внешняя сеть до api.telegram.org идёт только через SOCKS5 127.0.0.1:1080.
-- Свободно около 418G на диске, 11G RAM.
-- В PATH после системных каталогов идёт /data/data/com.termux/files/usr/bin:
-  там свои clang, lld, pkg-config, lsof, unzip. Системные /usr/bin/clang и
-  /usr/bin/lsof имеют приоритет, но при явных вызовах с полным путём это надо
-  учитывать.
+- Python (3.14, 3.14t, 3.11, 3.10, py): pip, ruff, pytest, pytest-cov, pytest-asyncio, hypothesis, coverage, pyflakes, flake8, pycodestyle, pylint, pyreverse, symilar, mypy, mypyc, stubgen, stubtest, pyright, isort, black, blackd, bandit, vulture, radon, xenon, pip-audit, codespell, PyYAML
+- pip-tools (pip-compile, pip-sync, pip-review)
+- uv (uv, uvx)
+- IDA Pro (ida, idat, idapyswitch)
+- Ghidra (analyzeHeadless, ghidraclean, ghidradebug, pyghidrarun)
+- opencode
+- GitHub CLI (gh)
+- Node.js (node, npm, npx, corepack, npm-check-updates, nodeenv)
+- ripgrep (rg)
+- curl
+- PowerShell (pwsh)
+- Windows PowerShell (powershell)
+- cmd
+- Ollama + Hugging Face CLI (huggingface-cli)
+- LLVM, Clang: clang, clang++, clang-cl, clang-cpp, clang-tidy, clangd, clang-format, git-clang-format, clang-doc, clang-query, clang-repl, clang-check, clang-apply-replacements, clang-include-cleaner, clang-scan-deps, scan-build, modularize, find-all-symbols, pp-trace, diagtool, flang, flang-new, lld, lld-link, ld.lld, ld64.lld, wasm-ld, lldb, lldb-dap, lldb-server, lldb-instr, lldb-argdumper, ar, nm, objcopy, objdump, readobj, strings, strip, size, ranlib, lib, dlltool, rc, mt, ml, ml64, mca, cov, profdata, profgen, dwp, cxxfilt, symbolizer, pdbutil, installapi, offload-bundler, nvlink-wrapper
+- Git (git, git-lfs, tig, scalar, git-gui, gitk)
+- Android NDK r27d (ndk-build, ndk-gdb, ndk-lldb, ndk-stack, ndk-which)
+- Rust (cargo, rustc, rustup, rust-analyzer, rustfmt, cargo-fmt, clippy через cargo, cargo-miri, rustdoc)
+- Flutter
+- Dart (dart, dartaotruntime)
+- .NET (dotnet, nuget)
+- CMake (cmake, cmake-gui, ctest, cpack)
+- Ninja
+- WinRAR (rar, unrar, winrar)
+- VS Code CLI (code, code-tunnel)
+- OpenSSH (ssh, sshd, scp, sftp, ssh-keygen, ssh-agent)
+- winget
+- WSL (wsl)
+- sudo (Windows)
+- ApkTool (apktool)
