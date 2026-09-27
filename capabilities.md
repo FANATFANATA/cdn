@@ -2,7 +2,7 @@
 
 Тебе дан полный доступ к системе. Ты можешь делать всё.
 
-- Все действия с Gradle выполняй только с флагом --no-daemon.
+- Все действия с Gradle выполняй только с флагом --no-daemon. (Gradle на этом хосте не установлен; правило остаётся на случай, если появится.)
 - Используй субагентов, когда задача делится на независимые части.
 - Независимые подзадачи запускай параллельно.
 - Задачи, которые можно разбить, разбивай на максимально возможное количество параллельных субагентов.
@@ -35,7 +35,7 @@
 ## Файлы правил
 
 - capabilities.md - базовый файл: общие правила и тулчейн десктопного хоста.
-- capabilities.server.md - серверный хост. Общие правила держим в нём одинаковыми с базовым файлом, отличия только в списке инструментов и в особенностях хоста.
+- capabilities.server.md - серверный хост. Общие правила держим в нём одинаковыми с базовым файлом. Отличия допустимы только в списке инструментов и в особенностях хоста, включая пометки об инструментах в общих правилах.
 - Правку общего правила вноси в оба файла в одной подзадаче. Расхождение общего правила в двух файлах - дефект.
 - В обоих файлах должен быть раздел с отсутствующими на хосте инструментами, иначе инструмент, которого нет, неотличим от недописанного.
 
@@ -43,7 +43,7 @@
 
 Список отражает содержимое PATH этого хоста, проверено Get-Command и where.exe 2026-09-27. Инструмента нет в списке - его нет на машине, вызывать без установки нельзя.
 
-- Python (3.14, 3.14t, 3.11, 3.10, py): pip, ruff, pytest, hypothesis, coverage, pyflakes, flake8, pycodestyle, pylint, pyreverse, symilar, mypy, mypyc, stubgen, stubtest, pyright, isort, black, blackd, bandit, vulture, radon, xenon, pip-audit, codespell.
+- Python (python, py, 3.14, 3.14t, 3.11, 3.10): pip, ruff, pytest, hypothesis, coverage, pyflakes, flake8, pycodestyle, pylint, pyreverse, symilar, mypy, mypyc, stubgen, stubtest, pyright, isort, black, blackd, bandit, vulture, radon, xenon, pip-audit, codespell. python3 - заглушка Microsoft Store, интерпретатор не запускает и возвращает код 9009.
 - Python-пакеты без консольных команд, проверять импортом: pytest-cov, pytest-asyncio, PyYAML.
 - pip-tools (pip-compile, pip-sync, pip-review)
 - uv (uv, uvx)
@@ -79,7 +79,8 @@
 
 Проверено Get-Command и where.exe 2026-09-27.
 
-- Gradle, JDK и Java (gradle, java, javac, jar), Maven (mvn), gradlew.
+- Gradle, JDK и Java (gradle, java, javac, jar), Maven (mvn). gradlew в PATH нет,
+  это файл проекта, проверяется в репозитории.
 - GNU binutils без префикса llvm- (ar, nm, objcopy, objdump, readobj,
   strings, strip, size, ranlib, lib, dlltool, rc, mt, ml, ml64, mca, cov,
   profdata, profgen, dwp, cxxfilt, symbolizer, pdbutil, installapi,

@@ -41,10 +41,11 @@
 
 ## Installed tools in PATH
 
-Список отражает реальное содержимое PATH на этом хосте. Это aarch64-сервер:
-Ubuntu 26.04 в PRoot-контейнере внутри Termux, без Windows-тулчейна. Если
-инструмента нет в списке ниже - его на машине нет, вызывать без установки
-нельзя.
+Список отражает содержимое PATH этого хоста. Инструмента нет в списке - его нет
+на машине, вызывать без установки нельзя.
+
+Хост: aarch64-сервер, Ubuntu 26.04 в PRoot-контейнере внутри Termux, без
+Windows-тулчейна.
 
 - Python 3.14.4 (python, python3). Системный pip под PEP 668, поэтому пакеты
   ставить через venv или uv.
@@ -75,8 +76,8 @@ Ubuntu 26.04 в PRoot-контейнере внутри Termux, без Windows-�
 - Ollama, huggingface-cli.
 - ruff, pytest, black, isort, mypy, pyright, flake8, bandit и прочие
   python-линтеры - ставятся через uv в конкретное venv.
-- IDA Pro, Ghidra, Cheat Engine, x64dbg, ReClass.NET - реверс-тулчейн
-  отсутствует, задачи реверса здесь не выполнять.
+- IDA Pro, Ghidra, Cheat Engine, x64dbg, ReClass.NET - реверс-тулчейна на
+  хосте нет. Инструмент запрашивай, результат разбора не выдумывай.
 - Android NDK.
 - VS Code CLI (code), WinRAR, winget, WSL, ApkTool.
 
